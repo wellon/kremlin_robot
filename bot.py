@@ -28,5 +28,5 @@ def main():
 if __name__ == '__main__':
     greetings()
     scheduler = BlockingScheduler()
-    scheduler.add_job(main, 'cron', day_of_week='mon-fri', hour=config.n_hour, minute=config.n_minute)
+    scheduler.add_job(main, 'cron', day_of_week='mon-fri', hour=int(config.n_hour), minute=int(config.n_minute))
     scheduler.start()
