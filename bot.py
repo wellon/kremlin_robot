@@ -15,12 +15,12 @@ def greetings():
 
 
 def main():
-    foo = ['в пацанскую', 'во Фламинго']
+    foo = config.choices
     choice = random.choice(foo)
 
     try:
         bot = telebot.TeleBot(config.bot_api_token, threaded=False)
-        bot.send_message(config.chat_id, "Сегодня вы идете жрать {}".format(choice))
+        bot.send_message(config.chat_id, "Сегодня вы идете жратБ в {}".format(choice))
     except Exception as ex:
         print(ex.args)
 
