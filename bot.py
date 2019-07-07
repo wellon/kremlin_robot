@@ -2,7 +2,11 @@ import random
 
 import telebot
 from apscheduler.schedulers.blocking import BlockingScheduler
+from telebot import apihelper
+
 import config
+
+apihelper.proxy = {'https': config.socks}
 
 
 def greetings():
